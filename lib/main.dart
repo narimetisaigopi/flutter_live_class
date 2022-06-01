@@ -7,6 +7,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'google_map.dart';
 import 'payment_screen.dart';
 
 void main() async {
@@ -79,7 +80,7 @@ class _MyAppState extends State<MyApp> {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: PaymentScreen(),
+      home: MapSample(),
     );
   }
 }
