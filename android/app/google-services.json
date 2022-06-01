@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "81696128202",
+    "project_id": "flutter-class-telugu",
+    "storage_bucket": "flutter-class-telugu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81696128202:android:de8bbeebbb1b150ccac833",
+        "android_client_info": {
+          "package_name": "com.flutterliveclass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81696128202-i1jqrp97rp71j9j7h6i7vs48u974sqq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterliveclass",
+            "certificate_hash": "fb03cfbb6e149832fb34213d050ae4b8c8c5bf4a"
+          }
+        },
+        {
+          "client_id": "81696128202-evc81qrk2t96oihobi1c6pcf7jjrdhgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOgEdZ9VhLZB96Ke3KAOLgu8kAVaYqPK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81696128202-evc81qrk2t96oihobi1c6pcf7jjrdhgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
