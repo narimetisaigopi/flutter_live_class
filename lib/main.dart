@@ -1,21 +1,25 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_live_class/login_screen.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_live_class/providers/provider_inc.dart';
+import 'package:provider/provider.dart';
 
-import 'google_map.dart';
-import 'payment_screen.dart';
+import 'providers/cart_provider.dart';
+import 'providers/count_provider.dart';
 
 void main() async {
   await runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
     await Firebase.initializeApp();
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-    runApp(MyApp());
+    runApp(MultiProvider(providers: [
+      ChangeNotifierProvider(create: (BuildContext context) => CountProvider()),
+      ChangeNotifierProvider(create: (BuildContext context) => CartProvider()),
+    ], child: MyApp()));
   }, (error, stackTrace) {
     FirebaseCrashlytics.instance.recordError(error, stackTrace);
   });
@@ -68,6 +72,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -80,7 +85,7 @@ class _MyAppState extends State<MyApp> {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MapSample(),
+      home: ProviderInc(),
     );
   }
 }
