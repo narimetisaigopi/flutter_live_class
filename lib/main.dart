@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 
 import 'providers/cart_provider.dart';
 import 'providers/count_provider.dart';
+import 'screens/covid_report_list.dart';
 
 void main() async {
   await runZonedGuarded(() async {
@@ -85,7 +86,7 @@ class _MyAppState extends State<MyApp> {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ProviderInc(),
+      home: CovidReportList(),
     );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_live_class/post_upload_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import 'post_upload_screen.dart';
 
 class HomeScreem extends StatefulWidget {
   const HomeScreem({Key? key}) : super(key: key);
